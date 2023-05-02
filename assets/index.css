@@ -2,7 +2,7 @@
 
 :root {
   --color1: #4d455d;
-  --color2: #e96479;
+  --color2: #36070e;
   --color3: #f5e9cf;
   --color4: #7db9b6;
   --color5: #454545;
@@ -18,6 +18,24 @@
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style: none;
+}
+
+/* MAIN */
+
+main {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.748358718487395) 10%,
+    rgba(77, 114, 125, 1) 35%,
+    rgba(88, 130, 138, 1) 59%,
+    rgba(2, 0, 36, 0.7763699229691876) 90%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* HEADER */
@@ -62,6 +80,7 @@ header {
 }
 
 .navbar-list li:first-child > a {
+  font-size: 22px;
   color: var(--color2);
   font-weight: 900;
 }
@@ -71,17 +90,6 @@ header {
   border-radius: 10px;
   margin: 1px 2px 2px 1px;
   cursor: pointer;
-}
-
-/* MAIN */
-
-main {
-  background-color: var(--color4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
 /* hero */
@@ -397,4 +405,12 @@ main {
   font-size: 15px;
   font-weight: bolder;
   cursor: pointer;
+}
+
+/* Ocultar menu hamburguesa en min 1200px */
+
+#menu-toggle,
+#cart-toggle,
+.menu-label {
+  display: none;
 }
