@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --color1: #4d455d;
+  --color2: #36070e;
+  --color3: #f5e9cf;
+  --color4: #7db9b6;
+  --color5: #454545;
+  --color6: #ff6000;
+  --color7: #ffa559;
+  --color8: #ffe6c7;
+}
+
+/* Tablet vertical */
+
+@media (max-width: 880px) {
+  .navbar {
+    gap: 10px;
+  }
+  .carrito-icon {
+    height: 30px;
+  }
+
+  .logo-inicio {
+    height: 50px;
+    width: 50px;
+  }
+
+  .navbar-list {
+    position: absolute;
+    top: 65px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    flex-direction: column;
+    background-color: var(--color1);
+    border: 2px solid var(--color2);
+    border-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    align-items: flex-start;
+    padding: 45px 30px;
+    gap: 20px;
+    z-index: 2;
+    display: none;
+  }
+
+  /* Mostramos el icono del menu */
+
+  .menu-label {
+    display: flex;
+    order: 2;
+    cursor: pointer;
+  }
+
+  #menu-icon {
+    width: 40px;
+  }
+
+  #menu-toggle:checked + .navbar-list {
+    display: flex;
+  }
+
+  /* HERO */
+
+  .hero-info {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hero-info h1 {
+    width: 90%;
+    max-width: 500px;
+    min-width: unset;
+  }
+
+  .hero-info p {
+    width: 60%;
+    max-width: 600px;
+  }
+
+  .hero-card {
+    display: none;
+  }
+
+  /* INFO */
+
+  #info h2 {
+    text-align: center;
+    width: 80%;
+  }
+
+  .info-cards-container {
+    max-width: 80%;
+  }
+
+  /* Discover  */
+
+  #discover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .discover-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
