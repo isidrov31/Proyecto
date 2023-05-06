@@ -427,6 +427,27 @@ header {
   cursor: pointer;
 }
 
+/* FOOTER */
+
+footer{
+  width: 100%;
+  background-color: var(--color1);
+  color: var(--color3);
+}
+
+.footer-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.footer-links a{
+color: var(--color3);
+  }
+
+
 /* Ocultar menu hamburguesa en min 1200px */
 
 #menu-toggle,
