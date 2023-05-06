@@ -113,7 +113,6 @@ header {
 .hero-info h1 {
   font-size: 40px;
   width: 80%;
-  min-width: 500px;
   font-weight: 900;
   color: var(--color2);
 }
