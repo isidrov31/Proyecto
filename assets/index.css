@@ -265,7 +265,7 @@ header {
   font-size: 32px;
   width: 45%;
   height: 120px;
-  font-weight: 800px;
+  font-weight: bolder;
   color: var(--color2);
 }
 
@@ -287,7 +287,7 @@ header {
   justify-content: center;
   text-align: center;
   font-size: 16px;
-  font-weight: 500px;
+  font-weight: 600;
   gap: 15px;
   color: var(--color3);
 }
@@ -433,4 +433,51 @@ header {
 #cart-toggle,
 .menu-label {
   display: none;
+}
+
+
+/* CARRITO */
+
+.cart{
+  position: absolute;
+  top: 65px;
+  right: 0;
+  padding: 50px 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.748358718487395) 10%,
+    rgba(77, 114, 125, 1) 35%,
+    rgba(88, 130, 138, 1) 59%,
+    rgba(2, 0, 36, 0.7763699229691876) 90%
+  );
+  border-left:  1px solid;
+  display: flex;
+  flex-direction: column;
+  height: calc(100 - 65px);
+  overflow-y: scroll;
+  display: none;
+  z-index: 2;
+}
+
+/* OCULTAR BARRA DE SCROLL DEL CARRITO */
+
+.cart::-webkit-scrollbar{
+  display: none;
+}
+
+.cart h2{
+  color: var(--color2);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  background-color: var(--color1);
+  padding: 20px;
+  border: 1px solid var(--color1);
+  border-radius: 10px;
 }
