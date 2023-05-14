@@ -477,6 +477,7 @@ color: var(--color3);
   display: none;
   z-index: 2;
   gap: 5px;
+  height: calc(100% - 80px);
 }
 
 
@@ -506,6 +507,7 @@ color: var(--color3);
   padding: 10px;
   border: 2px solid var(--color3);
   border-radius: 10px;
+
 }
 
 .cart-item img{
