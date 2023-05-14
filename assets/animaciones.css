@@ -1,4 +1,32 @@
 /* Agregamos el scroll behavior smooth para que se mas suve la navegacion */
 
-
 /* scroll padding top para cuando se clickea en el link del menu */
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+
+.overlay{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    /* Efecto glass */
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: none;
+}
+
+#cart-toggle:checked ~ .overlay{
+    display: block;
+}
+
+#menu-toggle:checked ~ .overlay{
+    display: block;
+}
