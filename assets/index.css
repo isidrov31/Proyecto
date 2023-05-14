@@ -11,6 +11,7 @@
   --color8: #ffe6c7;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,7 @@
   text-decoration: none;
   list-style: none;
 }
+
 
 /* MAIN */
 
@@ -86,17 +88,21 @@ header {
 }
 
 .carrito-icon {
-  font-weight: bold;
+  font-weight: 900;
   border-radius: 10px;
   margin: 1px 2px 2px 1px;
   cursor: pointer;
 }
 
+.fa-xl{
+  line-height: 1.2em
+}
+
 /* hero */
 
 #hero {
-  margin-top: 60px;
-  padding: 70px 0px;
+  /* margin-top: 60px; */
+  padding: 70px 0px 0px 0px;
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -248,7 +254,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 80px;
   max-width: 1200px;
 }
 
@@ -322,7 +328,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0px;
+  padding: 70px 0px;
   max-width: 1200px;
   width: 100%;
   gap: 10px;
@@ -478,6 +484,7 @@ color: var(--color3);
   display: none;
   z-index: 2;
 }
+
 
 /* OCULTAR BARRA DE SCROLL DEL CARRITO */
 

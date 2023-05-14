@@ -7,6 +7,13 @@
     <title>NFT Landing</title>
     <link rel="stylesheet" href="assets/index.css" />
     <link rel="stylesheet" href="assets/mediaqueries.css" />
+    <link rel="stylesheet" href="assets/animaciones.css">
+
+    <!-- Agregar el CDN de FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   </head>
 
   <body>
@@ -22,32 +29,24 @@
         <!-- Agregamos label con la img del menu adentro y el input a su vez, los linkeamos entre si -->
 
         <label for="menu-toggle" class="menu-label">
-          <img
-            src="assets/img/menu.png"
-            alt="logo menu"
-            width="30px"
-            id="menu-icon"
-          />
+          <i class="fa-solid fa-bars menu-label"></i>
         </label>
 
         <input type="checkbox" name="" id="menu-toggle" />
 
         <ul class="navbar-list">
-          <li><a href="">HOME</a></li>
-          <li><a href="">DESCUBRE</a></li>
-          <li><a href="">BTC</a></li>
-          <li><a href="">YOUTUBE</a></li>
-          <li><a href="">CONTACTANOS</a></li>
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#discover">DESCUBRE</a></li>
+          <li><a href="#products">BTC</a></li>
+          <li><a href="https://www.youtube.com/@NUCBAok" target="_blank">YOUTUBE</a></li>
+          <li><a href="https://www.nucba.com.ar/" target="_blank">CONOCENOS</a></li>
         </ul>
-        <!-- agregamos input y label para el carrito -->
+        <!-- Agregamos input y label para el carrito -->
+
+        <!-- Traer el icono del carrito -->
 
         <label for="cart-toggle" class="cart-label">
-          <img
-            src="assets/img/carrito icono.png"
-            alt=""
-            class="carrito-icon"
-            width="30px"
-          />
+          <i class="fa-solid fa-cart-shopping carrito-icon" > </i>
         </label>
 
         <input type="checkbox" id="cart-toggle" />
@@ -138,9 +137,8 @@
 
           <button class="btn-add">COMPRAR</button>
 
-<!-- FIN DEL CARRITO -->
-
         </div>
+        <!-- Fin del carrito -->
       </nav>
     </header>
 
