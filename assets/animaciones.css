@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --color1: #4d455d;
+  --color2: #36070e;
+  --color3: #f5e9cf;
+  --color4: #7db9b6;
+  --color5: #454545;
+  --color6: #ff6000;
+  --color7: #ffa559;
+  --color8: #ffe6c7;
+}
+
 /* Agregamos el scroll behavior smooth para que se mas suve la navegacion */
 
 /* scroll padding top para cuando se clickea en el link del menu */
@@ -7,6 +20,8 @@ html{
     scroll-padding-top: 65px;
 }
 
+
+/* Efecto glass */
 
 .overlay{
     position: absolute;
@@ -29,4 +44,26 @@ html{
 
 #menu-toggle:checked ~ .overlay{
     display: block;
+}
+
+.navbar-list li{
+    position: relative;
+}
+
+.navbar-list li a::after{
+    content: "";
+    background-color: var(--color3);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+}
+
+.navbar-list li a:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
