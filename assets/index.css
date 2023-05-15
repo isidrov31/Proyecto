@@ -535,8 +535,8 @@ color: var(--color3);
   gap: 10px;
 }
 
-.quantity-handler-down,
-.quantity-handler-up{
+
+.quantity-handler{
   display: flex;
   align-items: center;
   justify-content: center;
