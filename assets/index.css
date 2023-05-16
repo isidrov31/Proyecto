@@ -58,7 +58,8 @@ header {
 }
 
 .logo-inicio {
-  height: 55%;
+  height: 0;
+
 }
 
 .navbar,
@@ -421,6 +422,18 @@ header {
 }
 
 .btn-add {
+  border: none;
+  background-color: var(--color7);
+  border: 15px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: var(--color3);
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.btn-more-card{
   border: none;
   background-color: var(--color7);
   border: 15px;

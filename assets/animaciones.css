@@ -86,13 +86,16 @@ html{
     z-index: 2;
     gap: 5px;
     transform: translate(200%);
-    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    transition: all 0.9s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
 #cart-toggle:checked + .cart{
     transform: translate(0%);
-    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    transition: all 0.9s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
+
+/* Entrada del navbar-list */
+
 
 /* Animacion en hover */
 
@@ -117,4 +120,186 @@ html{
     cursor: pointer;
     transition: all .2s ease-in;
     background-color: var(--color3);
+}
+
+/* Botones */
+
+.btn-add,
+.hero-info a {
+    transition: all 400ms ease-out;
+}
+
+.btn-add:hover,
+.hero-info a:hover {
+    transition: all 400ms ease-out;
+    background-color: var(--color2);
+}
+
+.btn-more-card{
+    transition: all 0.2s ease-out;
+}
+
+.btn-more-card:hover{
+    font-weight: 900;
+    transition: all 0.2s ease-in;
+    background-color: var(--color2);
+}
+
+.category {
+    transition: all 0.2s ease-out;
+}
+
+.category:hover{
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 0.2s ease-in;
+    background-color: var(--color2);
+}
+
+/* Animaciones de entrada a los elementos del hero y a las seccion */
+
+/* Animacion fade */
+
+/* pasa de opacidad 0 a 1 */
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up{
+    from{
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide-right{
+    from{
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Aplico las animaciones */
+
+.hero-info h1 {
+      /* Animacion, Duracion y animation-function */
+    animation: fade 1s ease-in, slide-up 1s ease-in-out;
+}
+
+.hero-info p {
+    opacity: 0;
+       /* Animacion, Duracion y animation-function */
+       /* le agrego un fordwards para que el elemento quede fijo al final */
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.hero-info a{
+    opacity: 0;
+    /* Animacion, Duracion y animation-function */
+    /* le agrego un fordwards para que el elemento quede fijo al final */
+    animation: fade 0.7s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.6s;
+
+}
+
+.hero-card {
+    opacity: 0;
+    animation: fade 0.8 ease-in forwards, slide-right 1.9s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+#info h2{
+    opacity: 0;
+    /* Animacion, Duracion y animation-function */
+    /* le agrego un fordwards para que el elemento quede fijo al final */
+    animation: fade 0.7s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.6s;
+}
+
+.info-card{
+    opacity: 0;
+    /* Animacion, Duracion y animation-function */
+    /* le agrego un fordwards para que el elemento quede fijo al final */
+    animation: fade 0.7s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.7s;
+}
+
+.info-card:nth-child(1){
+    animation-delay: 0.9s;
+}
+
+.info-card:nth-child(2){
+    animation-delay: 0.6s;
+}
+
+.info-card:nth-child(3){
+    animation-delay: 1s;
+}
+
+/* Animaciones para las img de las cards */
+
+.product img {
+    transition: all 0.3s linear;
+}
+
+.product img:hover{
+    transform: scale(1.2);
+    transition: all 0.3s linear;
+}
+/* Animacion typing */
+
+@keyframes blink {
+    /* la barrita de escritura */
+    to {
+        background: transparent;
+        opacity: 0;
+    }
+}
+
+@keyframes typewriter{
+    /* para que ingrese el texto */
+    to {
+        left: 100%;
+    }
+}
+
+/* Le agregamos el span de la palabra crypto para acomodar el before y el afeter. Ademas el ponemos los mismos estilos  */
+
+.hero-info h1 span{
+    position: relative;
+}
+
+/* creamos y posicioneamos el before y el after.  */
+
+.hero-info h1 span::before,
+.hero-info h1 span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Esta animacion es para que las letras vayan apareciendo de a poco */
+.hero-info h1 span::before{
+    animation: typewriter 1.2s 1.4s steps(6) forwards;
+}
+
+/* Es la barrita de escritura se va moviendo con las letras */
+
+.hero-info h1 span::after{
+    width: 0.1rem;
+    animation: typewriter 1.2s 1.4s steps(6) forwards, blink 0.8s steps(6) infinite
 }
