@@ -203,7 +203,7 @@ footer p {
   }
 
   .info-card p {
-    font-size: 20px;
+    font-size: 15px;
   } 
 
   .info-card h3 {
@@ -211,7 +211,8 @@ footer p {
   } 
 
   #discover{
-    width: 80%;
+    width: 96%;
+    padding: unset;
   }
 
   #discover h2{
@@ -254,7 +255,12 @@ footer p {
 
   .product{
     width: 70%;
+    align-items: center;
   }
+
+.product-mid{
+  gap: 35px;
+}
 
   footer{
     display: flex;
